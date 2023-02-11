@@ -7,36 +7,37 @@ public class Cannon implements Building {
     private int damage;
 
     public Cannon() {
-        level = 1;
-        health = 100;
-        damage = 10;
+        this.level = 1;
+        this.health = 100;
+        this.damage = 10;
     }
-
+    @Override
     public int getLevel() {
-        return level;
+        return 0;
     }
 
+    @Override
     public int getHealth() {
-        return health;
+        return 0;
     }
 
+    @Override
     public int getDamage() {
-        return damage;
+        return 0;
     }
 
+    @Override
     public void upgrade() {
-        level++;
-        health += 100;
-        damage += 10;
+
     }
 
+    @Override
     public void damage(int damage) {
-        health -= damage;
+
     }
 
+    @Override
     public void repair() {
-        health = 100;
+
     }
-
-
 }

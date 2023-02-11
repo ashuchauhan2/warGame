@@ -7,13 +7,24 @@ public class Iron implements Resource{
         iron = 0;
     }
 
+
+    /**
+     * Gets resource.
+     *
+     * @return the resource
+     */
     @Override
     public int getResource() {
-        return iron;
+        return 0;
     }
 
+    /**
+     * Spend resource.
+     *
+     * @param spent the spent
+     */
     @Override
     public void spendResource(Resource spent) {
-        iron -= spent.getResource();
+
     }
 }

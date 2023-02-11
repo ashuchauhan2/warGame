@@ -3,6 +3,15 @@ package VillageMap;
 import GameEngine.Resource;
 
 public class IronMine implements ResourceMines{
+
+    private int hp;
+    private int lvl;
+
+    public IronMine() {
+        this.hp = 50;
+        this.lvl = 1;
+    }
+
     @Override
     public Resource mineResource(int lvl) {
         return null;
@@ -22,4 +31,5 @@ public class IronMine implements ResourceMines{
     public int getHP(int lvl) {
         return 0;
     }
+
 }

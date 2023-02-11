@@ -3,6 +3,15 @@ package VillageMap;
 import GameEngine.Resource;
 
 public class GoldMine implements ResourceMines{
+
+    private int hp;
+    private int lvl;
+
+    public GoldMine() {
+        this.hp = 1;
+        this.lvl = 1;
+    }
+
     @Override
     public Resource mineResource(int lvl) {
         return null;

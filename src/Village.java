@@ -18,12 +18,20 @@ public class Village {
         workers[1] = new Workers();
     }
 
+    /**
+     * Adds a building to the village.
+     *
+     * @param building
+     */
     private void addBuilding(Building building) {
         // Add building to village
     }
 
+    /**
+     * Helper method to add building, a worker must be available for a building to be added.
+     *
+     */
     private void isWorkerAvailable() {
 
     }
-
 }

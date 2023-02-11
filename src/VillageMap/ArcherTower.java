@@ -2,6 +2,17 @@ package VillageMap;
 
 public class ArcherTower implements Building {
 
+    private int level;
+    private int health;
+    private int damage;
+
+    public ArcherTower() {
+        this.level = 1;
+        this.health = 100;
+        this.damage = 10;
+
+    }
+
     @Override
     public int getLevel() {
         return 0;
