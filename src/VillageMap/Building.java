@@ -1,5 +1,16 @@
 package VillageMap;
 
 public interface Building {
-    //interface is blank, just to make each building of type building.
+
+    public int getLevel();
+
+    public int getHealth();
+
+    public int getDamage();
+
+    public void upgrade();
+
+    public void damage(int damage);
+
+    public void repair();
 }
