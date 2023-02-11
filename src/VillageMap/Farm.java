@@ -1,4 +1,4 @@
 package VillageMap;
 
-public class Farms {
+public class Farm {
 }

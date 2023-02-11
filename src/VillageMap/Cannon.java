@@ -1,4 +1,4 @@
 package VillageMap;
 
-public class Cannon {
+public class Cannon implements Building {
 }
