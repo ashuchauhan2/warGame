@@ -1,6 +1,9 @@
-package Attacking;
+package GameEngine;
 
-public class Attack {
+import Attacking.*;
+import VillageMap.*;
+
+public class AttackingEngine {
     public void generateVillage() {
     }
 

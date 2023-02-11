@@ -18,7 +18,7 @@ public class Village {
         workers[1] = new Workers();
     }
 
-    private void addBuilding() {
+    private void addBuilding(Building building) {
         // Add building to village
     }
 
