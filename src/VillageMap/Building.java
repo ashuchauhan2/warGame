@@ -18,11 +18,11 @@ public interface Building {
     public int getHealth();
 
     /**
-     * Gets damage.
+     * Gets damaged.
      *
      * @return the damage
      */
-    public int getDamage();
+    public int getAttacked();
 
     /**
      * Upgrade building level.
@@ -34,7 +34,7 @@ public interface Building {
      *
      * @param damage the damage
      */
-    public void damage(int damage);
+    public void doDamage(int damage);
 
     /**
      * Repair to full HP.

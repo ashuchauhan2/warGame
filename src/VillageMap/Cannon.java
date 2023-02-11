@@ -22,7 +22,7 @@ public class Cannon implements Building {
     }
 
     @Override
-    public int getDamage() {
+    public int getAttacked() {
         return 0;
     }
 
@@ -32,7 +32,7 @@ public class Cannon implements Building {
     }
 
     @Override
-    public void damage(int damage) {
+    public void doDamage(int damage) {
 
     }
 

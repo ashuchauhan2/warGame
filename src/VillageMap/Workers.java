@@ -16,4 +16,8 @@ public class Workers {
         return isAvailable;
     }
 
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
 }
