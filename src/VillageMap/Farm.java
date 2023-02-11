@@ -1,5 +1,7 @@
 package VillageMap;
 
+import Attacking.Troops;
+
 import java.util.ArrayList;
 
 public class Farm {

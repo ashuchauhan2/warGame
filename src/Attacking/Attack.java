@@ -6,4 +6,7 @@ public class Attack {
 
     public void attackOutcome(int defensiveScore, int offensiveScore) {
     }
+    public void buildArmy() {
+    }
+
 }
