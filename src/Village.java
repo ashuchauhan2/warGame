@@ -34,4 +34,15 @@ public class Village {
     private void isWorkerAvailable() {
 
     }
+
+    private void runGame() {
+
+    }
+
+    public static void main(String[] args) {
+        Village v = new Village();
+        while(true) {
+            v.runGame();
+        }
+    }
 }
