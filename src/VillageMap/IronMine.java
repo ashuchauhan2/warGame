@@ -14,7 +14,7 @@ public class IronMine implements ResourceMines{
 
     @Override
     public Resource mineResource(int lvl) {
-        return null;
+        return ;
     }
 
     @Override

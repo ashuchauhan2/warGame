@@ -15,7 +15,7 @@ public class Gold implements Resource {
      */
     @Override
     public int getResource() {
-        return 0;
+        return gold;
     }
 
     /**
@@ -25,7 +25,12 @@ public class Gold implements Resource {
      */
     @Override
     public void spendResource(Resource spent) {
+        gold -= spent.getResource();
+    }
 
+    @Override
+    public void mineResource() {
+        gold =
     }
 }
 

@@ -11,12 +11,6 @@ public class GoldMine implements ResourceMines{
         this.hp = 1;
         this.lvl = 1;
     }
-
-    @Override
-    public Resource mineResource(int lvl) {
-        return null;
-    }
-
     @Override
     public int maxResource(int lvl) {
         return 0;

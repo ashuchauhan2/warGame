@@ -14,4 +14,6 @@ public interface Resource {
      * @param spent the spent
      */
     public void spendResource(Resource spent);
+
+    public void mineResource();
 }

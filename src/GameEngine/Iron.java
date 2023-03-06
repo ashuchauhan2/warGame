@@ -15,7 +15,7 @@ public class Iron implements Resource{
      */
     @Override
     public int getResource() {
-        return 0;
+        return iron;
     }
 
     /**
@@ -25,6 +25,6 @@ public class Iron implements Resource{
      */
     @Override
     public void spendResource(Resource spent) {
-
+        iron -= spent.getResource();
     }
 }

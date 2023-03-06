@@ -24,7 +24,7 @@ public class ArcherTower implements Building {
     }
 
     @Override
-    public int getAttacked() {
+    public int getAttacked(int damageTaken) {
         return 0;
     }
 

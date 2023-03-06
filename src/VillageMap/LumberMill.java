@@ -1,5 +1,6 @@
 package VillageMap;
 
+import GameEngine.BuildVillage;
 import GameEngine.Resource;
 
 public class LumberMill implements ResourceMines{
@@ -10,11 +11,6 @@ public class LumberMill implements ResourceMines{
     public LumberMill() {
         this.hp = 50;
         this.lvl = 1;
-    }
-
-    @Override
-    public Resource mineResource(int lvl) {
-        return null;
     }
 
     @Override

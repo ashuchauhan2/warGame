@@ -13,29 +13,36 @@ public class Cannon implements Building {
     }
     @Override
     public int getLevel() {
-        return 0;
+        return level;
     }
 
     @Override
     public int getHealth() {
-        return 0;
+        return health;
     }
 
     @Override
-    public int getAttacked() {
-        return 0;
-    }
-
-    @Override
-    public void upgrade() {
+    public int getAttacked(int damageTaken) { //attack cannon
+        return health -= damageTaken;
 
     }
 
     @Override
-    public void doDamage(int damage) {
-
+    public void upgrade() { //upgrade cannon level
+        level++;
+        health += 100;
+        damage += 10;
     }
 
+    @Override
+    public int doDamage(int damage) { //defense attacks
+        return damage;
+    }
+
+    /**
+     * Repair to full HP.
+     * Used when the attack is over to restore building hp.
+     */
     @Override
     public void repair() {
 

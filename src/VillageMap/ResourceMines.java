@@ -10,7 +10,6 @@ public interface ResourceMines {
      * @param lvl the lvl
      * @return the resource
      */
-    public Resource mineResource(int lvl);
 
     /**
      * Max resource amount.

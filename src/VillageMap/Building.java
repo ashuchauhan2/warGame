@@ -22,7 +22,7 @@ public interface Building {
      *
      * @return the damage
      */
-    public int getAttacked();
+    public int getAttacked(int damageTaken);
 
     /**
      * Upgrade building level.

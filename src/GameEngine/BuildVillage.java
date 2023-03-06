@@ -2,17 +2,18 @@ package GameEngine;
 
 import VillageMap.*;
 
+import java.io.OptionalDataException;
 import java.util.ArrayList;
 
 public class BuildVillage {
 
     private VillageHall vh;
-    private ArrayList<GoldMine> goldMines;
-    private ArrayList<IronMine> ironMines;
-    private ArrayList<LumberMill> lumberMills;
-    private ArrayList<ArcherTower> archerTowers;
-    private ArrayList<Cannon> cannons;
-    private ArrayList<Farm> farms;
+    public ArrayList<GoldMine> goldMines;
+    public ArrayList<IronMine> ironMines;
+    public ArrayList<LumberMill> lumberMills;
+    public ArrayList<ArcherTower> archerTowers;
+    public ArrayList<Cannon> cannons;
+    public ArrayList<Farm> farms;
 
     public BuildVillage() {
         vh = new VillageHall();
@@ -30,22 +31,22 @@ public class BuildVillage {
 
     private int maxGoldMines(int vhLevel) {
         // Max number of gold mines based on village hall level
-        return 0;
+        return vhLevel + 1;
     }
 
     private int maxIronMines(int vhLevel) {
         // Max number of iron mines based on village hall level
-        return 0;
+        return vhLevel + 1;
     }
 
     private int maxLumberMines(int vhLevel) {
         // Max number of lumber mines based on village hall level
-        return 0;
+        return vhLevel + 1;
     }
 
     private int maxArcherTowers(int vhLevel) {
         // Max number of archer towers based on village hall level
-        return 0;
+        return vhLevel + 1;
     }
 
     private int maxCannons(int vhLevel) {
@@ -55,17 +56,25 @@ public class BuildVillage {
 
     private int maxArmySpace(int farms) {
         // Max number of army space based on # of farms
-        return 0;
+        return 10 * farms;
     }
 
     private int maxFarms(int vhLevel) {
         // Max number of farms based on village hall level
-        return 0;
+        return vhLevel;
     }
 
-    private int getDefensiveScore(int archerTowers, int cannons, int villageHallLevel) {
+    private int getDefensiveScore() {
         // Defensive score based on # of archer towers and cannons
-        return 0;
+        int score = 0;
+        for(ArcherTower at : archerTowers) {
+            score += at.getLevel();
+        }
+        for(Cannon c : cannons) {
+            score += c.getLevel();
+        }
+        score += vh.getVillageHallLvl();
+        return score;
     }
 
 }
