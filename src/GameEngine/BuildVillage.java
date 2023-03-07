@@ -27,21 +27,28 @@ public class BuildVillage {
 
     private void addBuilding(Building building) {
         // Add building to village
+        if (building.equals("GoldMine" && goldMines.size() <maxGoldMines()) {
+            goldMines.add((GoldMine) building);
+        } else if (building.equals("IronMine")) {
+            ironMines.add((IronMine) building);
+        } else if (building.equals("LumberMill")) {
+            lumberMills.add((LumberMill) building);
+        }
     }
 
-    private int maxGoldMines(int vhLevel) {
+    private int maxGoldMines() {
         // Max number of gold mines based on village hall level
-        return vhLevel + 1;
+        return vh.getVillageHallLvl() + 1;
     }
 
-    private int maxIronMines(int vhLevel) {
+    private int maxIronMines() {
         // Max number of iron mines based on village hall level
-        return vhLevel + 1;
+        return vh.getVillageHallLvl() + 1;
     }
 
-    private int maxLumberMines(int vhLevel) {
+    private int maxLumberMines() {
         // Max number of lumber mines based on village hall level
-        return vhLevel + 1;
+        return vh.getVillageHallLvl() + 1;
     }
 
     private int maxArcherTowers(int vhLevel) {

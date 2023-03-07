@@ -36,7 +36,8 @@ public class Village {
     }
 
     private void runGame() {
-
+        System.out.println("Welcome to your village!");
+        
     }
 
     public static void main(String[] args) {
