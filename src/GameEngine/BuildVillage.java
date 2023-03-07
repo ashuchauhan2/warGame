@@ -23,9 +23,6 @@ public class BuildVillage {
         archerTowers = new ArrayList<>();
         cannons = new ArrayList<>();
         farms = new ArrayList<>();
-        Building GoldMine = null;
-        Building IronMine = null;
-
     }
 
     private void addBuilding(Building building) {
