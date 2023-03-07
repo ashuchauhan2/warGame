@@ -3,43 +3,37 @@ package VillageMap;
 public class ArcherTower implements Building {
 
     private int level;
-    private int health;
-    private int damage;
+    private int score;
 
     public ArcherTower() {
         this.level = 1;
-        this.health = 100;
-        this.damage = 10;
-
+        this.score = 100;
     }
 
+
+    /**
+     * Gets level.
+     *
+     * @return the level
+     */
     @Override
     public int getLevel() {
-        return 0;
+        return level;
     }
 
+    /**
+     * Gets the defensive score of the building.
+     *
+     * @return the health
+     */
     @Override
-    public int getHealth() {
-        return 0;
-    }
-
-    @Override
-    public int getAttacked(int damageTaken) {
-        return 0;
+    public int getScore() {
+        return score;
     }
 
     @Override
     public void upgrade() {
-
-    }
-
-    @Override
-    public void doDamage(int damage) {
-
-    }
-
-    @Override
-    public void repair() {
-
+        level++;
+        score += 100;
     }
 }

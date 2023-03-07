@@ -11,33 +11,17 @@ public interface Building {
     public int getLevel();
 
     /**
-     * Gets health.
+     * Gets the defensive score of the building.
      *
      * @return the health
      */
-    public int getHealth();
+    public int getScore();
 
-    /**
-     * Gets damaged.
-     *
-     * @return the damage
-     */
-    public int getAttacked(int damageTaken);
-
-    /**
-     * Upgrade building level.
-     */
     public void upgrade();
 
     /**
      * Deals damage.
      *
      * @param damage the damage
-     */
-    public void doDamage(int damage);
-
-    /**
-     * Repair to full HP.
-     * Used when the attack is over to restore building hp.
      */
 }

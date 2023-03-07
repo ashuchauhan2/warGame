@@ -1,34 +1,43 @@
 package Attacking;
 
 public class Archer implements Troops{
-    private int hp;
-    private int damage;
+    private int score;
     private int level;
 
     public Archer() {
-        hp = 100;
-        damage = 100;
+        score = 85;
         level = 1;
     }
 
+
+    /**
+     * Gets hp.
+     *
+     * @return the hp
+     */
     @Override
-    public int getHP() {
-        return hp;
+    public int getScore() {
+        return score;
     }
 
-    @Override
-    public int damageDealt() {
-        return damage;
-    }
-
+    /**
+     * Returns troop level.
+     *
+     * @return the level
+     */
     @Override
     public int getLevel() {
         return level;
     }
 
+    /**
+     * Upgrade troop level.
+     *
+     * @return the int
+     */
     @Override
-    public int upgradeLevel() {
+    public void upgradeLevel() {
         level++;
-        return level;
+        score += (score*0.15); //15% increase in score with each upgrade
     }
 }

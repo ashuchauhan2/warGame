@@ -6,14 +6,7 @@ public interface Troops {
      *
      * @return the hp
      */
-    public int getHP();
-
-    /**
-     * How much damage the troop deals.
-     *
-     * @return the int
-     */
-    public int damageDealt();
+    public int getScore();
 
     /**
      * Returns troop level.
@@ -27,5 +20,5 @@ public interface Troops {
      *
      * @return the int
      */
-    public int upgradeLevel();
+    public void upgradeLevel();
 }

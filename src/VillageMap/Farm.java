@@ -11,7 +11,7 @@ public class Farm {
         army = new ArrayList<Troops>();
     }
     public boolean isFarmFull() {
-        return army.size() <= 10;
+        return army.size() >= 10;
     }
 
     public void addTroops(Troops troops) {
@@ -21,6 +21,6 @@ public class Farm {
     }
 
     public void useTroops(Troops troops) {
-        army.remove(troops);
+        army.clear();
     }
 }
