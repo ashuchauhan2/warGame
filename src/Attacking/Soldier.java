@@ -2,13 +2,11 @@ package Attacking;
 
 public class Soldier implements Troops {
 
-    private int hp;
-    private int damage;
+    private int score;
     private int level;
 
     public Soldier() {
-        hp = 100;
-        damage = 10;
+        score = 100;
         level = 1;
     }
 
@@ -18,18 +16,8 @@ public class Soldier implements Troops {
      * @return the hp
      */
     @Override
-    public int getHP() {
-        return 0;
-    }
-
-    /**
-     * How much damage the troop deals.
-     *
-     * @return the int
-     */
-    @Override
-    public int damageDealt() {
-        return 0;
+    public int getScore() {
+        return score;
     }
 
     /**
@@ -39,7 +27,7 @@ public class Soldier implements Troops {
      */
     @Override
     public int getLevel() {
-        return 0;
+        return level;
     }
 
     /**
@@ -48,8 +36,8 @@ public class Soldier implements Troops {
      * @return the int
      */
     @Override
-    public int upgradeLevel() {
-        return 0;
+    public void upgradeLevel() {
+        level++;
+        score += (score*0.15); //15% increase in score with each upgrade
     }
-
 }

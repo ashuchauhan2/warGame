@@ -7,7 +7,9 @@ public class AttackingEngine {
     /**
      * Generate random village to attack.
      */
-    public void generateVillage() {
+    public void generateVillageScore() {
+        // Generate random village to attack
+
     }
 
     /**
@@ -17,21 +19,11 @@ public class AttackingEngine {
      * @param offensiveScore the offensive score
      */
     public void attackOutcome(int defensiveScore, int offensiveScore) {
-
-    }
-
-    /**
-     * Build user army.
-     */
-    public void buildArmy() {
-
-    }
-
-    /**
-     * Attack village method to commence the attack.
-     */
-    public void attackVillage() {
-
+        if(defensiveScore + Math.random()*10 > offensiveScore) {
+            System.out.println("You lost the battle!");
+        } else {
+            System.out.println("You won the battle!");
+        }
     }
 
 }
