@@ -23,16 +23,39 @@ public class BuildVillage {
         archerTowers = new ArrayList<>();
         cannons = new ArrayList<>();
         farms = new ArrayList<>();
+        Building GoldMine = null;
+        Building IronMine = null;
+
     }
 
     private void addBuilding(Building building) {
         // Add building to village
-        if (building.equals("GoldMine" && goldMines.size() <maxGoldMines()) {
-            goldMines.add((GoldMine) building);
-        } else if (building.equals("IronMine")) {
-            ironMines.add((IronMine) building);
-        } else if (building.equals("LumberMill")) {
-            lumberMills.add((LumberMill) building);
+        switch(building.getClass().getSimpleName()) {
+            case "GoldMine":
+                if(goldMines.size() < maxGoldMines()) {
+                    goldMines.add((GoldMine) building);
+                }
+                break;
+            case "IronMine":
+                if(ironMines.size() < maxIronMines()) {
+                    ironMines.add((IronMine) building);
+                }
+                break;
+            case "LumberMill":
+                if(lumberMills.size() < maxLumberMines()) {
+                    lumberMills.add((LumberMill) building);
+                }
+                break;
+            case "ArcherTower":
+                if(archerTowers.size() < maxArcherTowers()) {
+                    archerTowers.add((ArcherTower) building);
+                }
+                break;
+            case "Cannon":
+                if(cannons.size() < maxCannons()) {
+                    cannons.add((Cannon) building);
+                }
+                break;
         }
     }
 
@@ -51,12 +74,12 @@ public class BuildVillage {
         return vh.getVillageHallLvl() + 1;
     }
 
-    private int maxArcherTowers(int vhLevel) {
+    private int maxArcherTowers() {
         // Max number of archer towers based on village hall level
-        return vhLevel + 1;
+        return vh.getVillageHallLvl();
     }
 
-    private int maxCannons(int vhLevel) {
+    private int maxCannons() {
         // Max number of cannon towers based on village hall level
         return vh.getVillageHallLvl();
     }
@@ -66,9 +89,9 @@ public class BuildVillage {
         return 10 * farms;
     }
 
-    private int maxFarms(int vhLevel) {
+    private int maxFarms() {
         // Max number of farms based on village hall level
-        return vhLevel;
+        return vh.getVillageHallLvl();
     }
 
     private int getDefensiveScore() {

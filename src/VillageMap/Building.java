@@ -40,5 +40,4 @@ public interface Building {
      * Repair to full HP.
      * Used when the attack is over to restore building hp.
      */
-    public void repair();
 }
