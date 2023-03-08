@@ -48,10 +48,10 @@ public class Village {
             System.out.println("2. Upgrade a building");
             System.out.println("3. Attack");
             System.out.println("4. List buildings");
-            System.out.println("4. Exit");
+            System.out.println("5. Exit");
             int choice = scan.nextInt();
             switch(choice) {
-                case(1):
+                case (1):
                     System.out.println("What building would you like to build?");
                     System.out.println("1. Gold Mine");
                     System.out.println("2. Iron Mine");
@@ -61,25 +61,25 @@ public class Village {
                     System.out.println("6. Farm");
                     System.out.println("7. Village Hall");
                     int buildingChoice = scan.nextInt();
-                    switch(buildingChoice) {
-                        case(1):
+                    switch (buildingChoice) {
+                        case (1):
                             addBuilding(new GoldMine());
                             break;
-                        case(2):
+                        case (2):
                             addBuilding(new IronMine());
                             break;
-                        case(3):
+                        case (3):
                             addBuilding(new LumberMill());
                             break;
-                        case(4):
+                        case (4):
                             addBuilding(new ArcherTower());
                             break;
-                        case(5):
+                        case (5):
                             addBuilding(new Cannon());
                             break;
                     }
                     break;
-                case(2):
+                case (2):
                     System.out.println("What building would you like to upgrade?");
                     System.out.println("1. Gold Mine");
                     System.out.println("2. Iron Mine");
@@ -88,53 +88,53 @@ public class Village {
                     System.out.println("5. Cannon");
                     System.out.println("6. Village Hall");
                     int upgradeChoice = scan.nextInt();
-                    switch(upgradeChoice) {
-                        case(1):
-                            for(GoldMine g : goldMines) {
-                                if(g.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
+                    switch (upgradeChoice) {
+                        case (1):
+                            for (GoldMine g : goldMines) {
+                                if (g.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
                                     g.upgradeMine();
                                 }
                             }
                             break;
-                        case(2):
-                            for(IronMine i : ironMines) {
-                                if(i.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
+                        case (2):
+                            for (IronMine i : ironMines) {
+                                if (i.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
                                     i.upgradeMine();
                                 }
                             }
                             break;
-                        case(3):
-                            for(LumberMill l : lumberMills) {
-                                if(l.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
+                        case (3):
+                            for (LumberMill l : lumberMills) {
+                                if (l.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
                                     l.upgradeMine();
                                 }
                             }
                             break;
-                        case(4):
-                            for(ArcherTower a : archerTowers) {
-                                if(a.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
+                        case (4):
+                            for (ArcherTower a : archerTowers) {
+                                if (a.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
                                     a.upgrade();
                                 }
                             }
                             break;
-                        case(5):
-                            for(Cannon c : cannons) {
-                                if(c.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
+                        case (5):
+                            for (Cannon c : cannons) {
+                                if (c.getLevel() < vh.maxBuildingLevel(vh.getVillageHallLvl())) {
                                     c.upgrade();
                                 }
                             }
                             break;
-                        case(6):
-                            if(vh.getVillageHallLvl() < 5) {
+                        case (6):
+                            if (vh.getVillageHallLvl() < 5) {
                                 vh.upgradeVillageHall();
                             }
                             break;
                     }
                     break;
-                case(3):
+                case (3):
                     //attack case
                     break;
-                case(4):
+                case (4):
                     System.out.println("What building would you like to see a list of?");
                     System.out.println("1. Gold Mine");
                     System.out.println("2. Iron Mine");
@@ -142,24 +142,27 @@ public class Village {
                     System.out.println("4. Archer Tower");
                     System.out.println("5. Cannon");
                     int listChoice = scan.nextInt();
-                    switch(listChoice) {
-                        case(1):
+                    switch (listChoice) {
+                        case (1):
                             goldMines.forEach(g -> System.out.println(g.toString()));
                             break;
-                        case(2):
+                        case (2):
                             ironMines.forEach(i -> System.out.println(i.toString()));
                             break;
-                        case(3):
+                        case (3):
                             lumberMills.forEach(l -> System.out.println(l.toString()));
                             break;
-                        case(4):
+                        case (4):
                             archerTowers.forEach(a -> System.out.println(a.toString()));
                             break;
-                        case(5):
+                        case (5):
                             cannons.forEach(c -> System.out.println(c.toString()));
                             break;
                     }
-
+                    break;
+                case (5):
+                    System.exit(0);
+                    break;
             }
         }
     }
