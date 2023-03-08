@@ -27,4 +27,9 @@ public class Iron implements Resource{
     public void spendResource(Resource spent) {
         iron -= spent.getResource();
     }
+
+    @Override
+    public void mineResource() {
+        iron += 20;
+    }
 }

@@ -30,7 +30,7 @@ public class Gold implements Resource {
 
     @Override
     public void mineResource() {
-        gold =
+        gold += 20;
     }
 }
 

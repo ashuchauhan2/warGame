@@ -8,12 +8,12 @@ import java.util.ArrayList;
 public class BuildVillage {
 
     private VillageHall vh;
-    public ArrayList<GoldMine> goldMines;
-    public ArrayList<IronMine> ironMines;
-    public ArrayList<LumberMill> lumberMills;
-    public ArrayList<ArcherTower> archerTowers;
-    public ArrayList<Cannon> cannons;
-    public ArrayList<Farm> farms;
+    private ArrayList<GoldMine> goldMines;
+    private ArrayList<IronMine> ironMines;
+    private ArrayList<LumberMill> lumberMills;
+    private ArrayList<ArcherTower> archerTowers;
+    private ArrayList<Cannon> cannons;
+    private ArrayList<Farm> farms;
 
     public BuildVillage() {
         vh = new VillageHall();
@@ -25,7 +25,7 @@ public class BuildVillage {
         farms = new ArrayList<>();
     }
 
-    private void addBuilding(Building building) {
+    public void addBuilding(Building building) {
         // Add building to village
         switch(building.getClass().getSimpleName()) {
             case "GoldMine":
@@ -71,27 +71,27 @@ public class BuildVillage {
         return vh.getVillageHallLvl() + 1;
     }
 
-    private int maxArcherTowers() {
+    public int maxArcherTowers() {
         // Max number of archer towers based on village hall level
         return vh.getVillageHallLvl();
     }
 
-    private int maxCannons() {
+    public int maxCannons() {
         // Max number of cannon towers based on village hall level
         return vh.getVillageHallLvl();
     }
 
-    private int maxArmySpace(int farms) {
+    public int maxArmySpace(int farms) {
         // Max number of army space based on # of farms
         return 10 * farms;
     }
 
-    private int maxFarms() {
+    public int maxFarms() {
         // Max number of farms based on village hall level
         return vh.getVillageHallLvl();
     }
 
-    private int getDefensiveScore() {
+    public int getDefensiveScore() {
         // Defensive score based on # of archer towers and cannons
         int score = 0;
         for(ArcherTower at : archerTowers) {

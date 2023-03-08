@@ -1,6 +1,5 @@
 package GameEngine;
 
-import BuildVillage.BuildVillage;
 
 public class Lumber implements Resource {
 
@@ -28,6 +27,11 @@ public class Lumber implements Resource {
     @Override
     public void spendResource(Resource spent) {
         lumber -= spent.getResource();
+    }
+
+    @Override
+    public void mineResource() {
+        lumber += 20;
     }
 
 }

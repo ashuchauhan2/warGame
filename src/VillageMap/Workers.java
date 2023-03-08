@@ -2,22 +2,18 @@ package VillageMap;
 import java.time.*;
 
 public class Workers {
-    private boolean isAvailable;
+    private boolean available;
 
     public Workers() {
-        isAvailable = true;
-    }
-
-    public boolean useWorker(Duration duration) {
-        return isAvailable;
+        available = true;
     }
 
     public boolean isAvailable() {
-        return isAvailable;
+        return available;
     }
 
-    public void setAvailable(boolean available) {
-        isAvailable = available;
+    public void setAvailable(boolean a) {
+        available = a;
     }
 
 }

@@ -6,30 +6,53 @@ public class IronMine implements ResourceMines{
 
     private int hp;
     private int lvl;
+    private int score;
 
     public IronMine() {
         this.hp = 50;
         this.lvl = 1;
-    }
-
-    @Override
-    public Resource mineResource(int lvl) {
-        return ;
+        this.score = 1;
     }
 
     @Override
     public int maxResource(int lvl) {
-        return 0;
+        return lvl*10;
+    }
+
+    /**
+     * Upgrade mine level.
+     *
+     * @return the int
+     */
+    @Override
+    public void upgradeMine() {
+        lvl++;
+        score++;
+        //hp+=10;
+    }
+
+    /**
+     * Gets level.
+     *
+     * @return the level
+     */
+    @Override
+    public int getLevel() {
+        return lvl;
+    }
+
+    /**
+     * Gets the defensive score of the building.
+     *
+     * @return the health
+     */
+    @Override
+    public int getScore() {
+        return score;
     }
 
     @Override
-    public int upgradeMine(int mineLvl) {
-        return 0;
+    public void upgrade() {
+        upgradeMine();
     }
-
-    @Override
-    public int getHP(int lvl) {
-        return 0;
-    }
-
 }
