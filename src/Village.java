@@ -47,6 +47,7 @@ public class Village {
             System.out.println("1. Build a building");
             System.out.println("2. Upgrade a building");
             System.out.println("3. Attack");
+            System.out.println("4. List buildings");
             System.out.println("4. Exit");
             int choice = scan.nextInt();
             switch(choice) {
@@ -130,6 +131,35 @@ public class Village {
                             break;
                     }
                     break;
+                case(3):
+                    //attack case
+                    break;
+                case(4):
+                    System.out.println("What building would you like to see a list of?");
+                    System.out.println("1. Gold Mine");
+                    System.out.println("2. Iron Mine");
+                    System.out.println("3. Lumber Mill");
+                    System.out.println("4. Archer Tower");
+                    System.out.println("5. Cannon");
+                    int listChoice = scan.nextInt();
+                    switch(listChoice) {
+                        case(1):
+                            goldMines.forEach(g -> System.out.println(g.toString()));
+                            break;
+                        case(2):
+                            ironMines.forEach(i -> System.out.println(i.toString()));
+                            break;
+                        case(3):
+                            lumberMills.forEach(l -> System.out.println(l.toString()));
+                            break;
+                        case(4):
+                            archerTowers.forEach(a -> System.out.println(a.toString()));
+                            break;
+                        case(5):
+                            cannons.forEach(c -> System.out.println(c.toString()));
+                            break;
+                    }
+
             }
         }
     }
