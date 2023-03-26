@@ -1,12 +1,19 @@
-package GameEngine;
+package View;
 
-public class Gold implements Resource {
-    private int gold;
 
-    public Gold() {
-        gold = 0;
+import Model.Resource;
+
+public class Lumber implements Resource {
+
+    private int lumber;
+
+    public Lumber() {
+        lumber = 0;
     }
 
+    public void lumberDisplay(){
+        System.out.println("Lumber: " + getResource());
+    }
 
     /**
      * Gets resource.
@@ -15,7 +22,7 @@ public class Gold implements Resource {
      */
     @Override
     public int getResource() {
-        return gold;
+        return lumber;
     }
 
     /**
@@ -25,12 +32,12 @@ public class Gold implements Resource {
      */
     @Override
     public void spendResource(Resource spent) {
-        gold -= spent.getResource();
+        lumber -= spent.getResource();
     }
 
     @Override
     public void mineResource() {
-        gold += 20;
+        lumber += 20;
     }
-}
 
+}

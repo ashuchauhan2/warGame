@@ -1,4 +1,4 @@
-package GameEngine;
+package Model;
 
 public interface Resource {
     /**

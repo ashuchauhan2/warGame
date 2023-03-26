@@ -1,22 +1,29 @@
-package GameEngine;
+package View;
 
-public class Iron implements Resource{
+import Model.Resource;
+
+public class Iron implements Resource {
     private int iron;
+    private Iron ironView;
 
     public Iron() {
         iron = 0;
     }
 
+    public void IronView (Iron ironV){
+        this.ironView= ironV;
+    }
 
+public void ironDisplay(){
+    System.out.println("Iron: " + getResource());
+}
     /**
      * Gets resource.
      *
      * @return the resource
      */
     @Override
-    public int getResource() {
-        return iron;
-    }
+    public int getResource() { return iron; }
 
     /**
      * Spend resource.

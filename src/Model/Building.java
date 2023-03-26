@@ -1,4 +1,4 @@
-package VillageMap;
+package Model;
 
 
 public interface Building {

@@ -1,6 +1,8 @@
-package Attacking;
+package Model;
 
 public interface Troops {
+
+    public Troops createTroop();
     /**
      * Gets hp.
      *

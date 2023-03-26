@@ -1,15 +1,22 @@
-package Attacking;
+package Model;
 
-public class Knight implements Troops {
-    private int hp;
+public class Soldier implements Troops {
+
     private int score;
     private int level;
 
-    public Knight() {
+    public Soldier() {
         score = 100;
         level = 1;
     }
 
+    @Override
+    public Troops createTroop() {
+        return new Soldier();
+    }
+public void soldierDisplayLevel(){
+    System.out.println("Soldier level is: " + getLevel());
+}
     /**
      * Gets hp.
      *

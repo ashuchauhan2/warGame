@@ -1,6 +1,8 @@
-import VillageMap.*;
-import GameEngine.*;
-import Attacking.*;
+import Model.VillageHall;
+import Model.*;
+import Controller.*;
+import View.*;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,6 +20,10 @@ public class Village {
     private ArrayList<Farm> farms = new ArrayList<>();
     private BuildVillage village = new BuildVillage();
     private Scanner scan = new Scanner(System.in);
+    private Archer archer;
+    private Catapult catapult;
+    private Knight knight;
+    private Soldier soldier;
 
     public Village() {
         gold = new Gold();
@@ -48,10 +54,16 @@ public class Village {
             System.out.println("2. Upgrade a building");
             System.out.println("3. Attack");
             System.out.println("4. List buildings");
-            System.out.println("5. Exit");
+            System.out.println("5. Display Attacking Levels");
+            System.out.println("6. Exit");
             int choice = scan.nextInt();
+
+
             switch(choice) {
                 case (1):
+                    iron.ironDisplay();
+                    gold.goldDisplay();
+                    lumber.lumberDisplay();
                     System.out.println("What building would you like to build?");
                     System.out.println("1. Gold Mine");
                     System.out.println("2. Iron Mine");
@@ -80,6 +92,9 @@ public class Village {
                     }
                     break;
                 case (2):
+                    iron.ironDisplay();
+                    gold.goldDisplay();
+                    lumber.lumberDisplay();
                     System.out.println("What building would you like to upgrade?");
                     System.out.println("1. Gold Mine");
                     System.out.println("2. Iron Mine");
@@ -160,7 +175,25 @@ public class Village {
                             break;
                     }
                     break;
-                case (5):
+                case(5):
+                    System.out.println("What Attacking unit would you like to see");
+                    System.out.println("1. Archer");
+                    System.out.println("2. Catapult");
+                    System.out.println("3. Knight");
+                    System.out.println("4. Soldier");
+                    int attackingChoice = scan.nextInt();
+                    switch (attackingChoice){
+                        case(1): archer.archerDisplayLevel();
+                        break;
+                        case(2): catapult.catapultDisplayLevel();
+                            break;
+                        case(3): knight.knightDisplayLevel();
+                            break;
+                        case(4): soldier.soldierDisplayLevel();
+                            break;
+
+                    }
+                case (6):
                     System.exit(0);
                     break;
             }

@@ -1,6 +1,6 @@
-package Attacking;
+package Model;
 
-public class Archer implements Troops{
+public class Archer implements Troops {
     private int score;
     private int level;
 
@@ -10,6 +10,14 @@ public class Archer implements Troops{
     }
 
 
+    @Override
+    public Troops createTroop() {
+        return new Archer();
+    }
+
+    public void archerDisplayLevel(){
+        System.out.println("Soldier level is: " + getLevel());
+    }
     /**
      * Gets hp.
      *

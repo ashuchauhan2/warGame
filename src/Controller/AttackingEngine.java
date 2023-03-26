@@ -1,7 +1,7 @@
-package GameEngine;
+package Controller;
 
-import Attacking.*;
-import VillageMap.*;
+import View.*;
+import Model.*;
 
 public class AttackingEngine {
     /**

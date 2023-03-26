@@ -1,15 +1,22 @@
-package Attacking;
+package Model;
 
-public class Catapult implements Troops {
+public class Knight implements Troops {
     private int hp;
     private int score;
     private int level;
 
-    public Catapult() {
+    public Knight() {
         score = 100;
         level = 1;
     }
 
+    @Override
+    public Troops createTroop() {
+        return new Knight();
+    }
+    public void knightDisplayLevel(){
+        System.out.println("Knight level is: " + getLevel());
+    }
     /**
      * Gets hp.
      *
